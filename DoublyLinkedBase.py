@@ -31,8 +31,8 @@ class _DoublyLinkedBase:
         new=self._Node(e,predecessor, successor)
         predecessor._next=new
         successor._prev=new
-        self. size += 1
-        return new
+        self._size += 1
+        return new._element
     def _delete_node(self, node):
         predecessor=node._prev
         successor=node._next
@@ -40,7 +40,7 @@ class _DoublyLinkedBase:
         successor._prev=predecessor
         self._size =self._size - 1
         element = node._element
-        node. prev = node. next = node. element = None
+        node._prev = node._next = node._element = None
         return element
     
         
