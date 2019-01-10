@@ -33,7 +33,7 @@ class _DoublyLinkedBase:
         successor._prev=new
         self. size += 1
         return new
-    def _nonsentinel(self, node):
+    def _delete_node(self, node):
         predecessor=node._prev
         successor=node._next
         predecessor._next=node._next
